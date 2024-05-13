@@ -43,19 +43,27 @@ function displayWelcomeMessage() {
 
 // Function to prompt user for name and set the cookie with specific domain and path
 function promptForName() {
-    var userInput = prompt("Please enter your name:");
-    if (userInput && userInput.trim() !== "") {
-        setCookie('User', userInput.trim(), 1, 'dev77cmd.github.io', '/'); // Set 'User' cookie with 1-day expiration
-        setCookie('DateTime', new Date().toLocaleString(), 1, 'dev77cmd.github.io', '/'); // Set 'DateTime' cookie with 1-day expiration
-        displayWelcomeMessage(); // Display welcome message after setting cookies
+    var userName = getCookieValue('User');
+
+    if (userName && userName.trim() !== "") {
+        // User cookie exists, display welcome message directly
+        displayWelcomeMessage();
     } else {
-        alert("Invalid name. Please reload the page and try again.");
+        // User cookie doesn't exist, prompt for name
+        var userInput = prompt("Please enter your name:");
+        if (userInput && userInput.trim() !== "") {
+            setCookie('User', userInput.trim(), 1, 'dev77cmd.github.io', '/');
+            setCookie('DateTime', new Date().toLocaleString(), 1, 'dev77cmd.github.io', '/');
+            displayWelcomeMessage(); // Display welcome message after setting cookies
+        } else {
+            alert("Invalid name. Please reload the page and try again.");
+        }
     }
 }
 
 // Automatically run the script when the page finishes loading
 window.onload = function() {
-    displayWelcomeMessage(); // Display welcome message based on existing cookies
+    promptForName(); // Check name
 
     // Add event listener to handle page refreshes (e.g., F5, browser refresh button)
     window.addEventListener('beforeunload', function(event) {
