@@ -29,7 +29,8 @@ function getCookieValue(cookieName) {
 // Function to display welcome message with user's name and date/time
 function displayWelcomeMessage() {
     var userName = getCookieValue('User');
-    var dateTimeString = getCookieValue('DateTime');
+    const currentTimeDate = new Date();
+    const dateTimeString = currentTimeDate.toLocaleString();
 
     if (userName && dateTimeString) {
         var welcomeMessage = "Welcome back, " + userName + "!";
