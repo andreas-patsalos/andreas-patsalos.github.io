@@ -59,12 +59,14 @@ window.onload = function() {
 
     // Add event listener to handle page refreshes (e.g., F5, browser refresh button)
     window.addEventListener('beforeunload', function(event) {
+        console.log('Before unload event triggered');
         // Set a session cookie to detect page refreshes
         setCookie('SessionRefresh', 'true', 0, 'dev77cmd.github.io', '/'); // Session cookie (expires when browser is closed)
     });
 
     // Add event listener to handle when the DOM content is fully loaded (including images, CSS, etc.)
     document.addEventListener('DOMContentLoaded', function(event) {
+        console.log('DOM content loaded');
         displayWelcomeMessage(); // Display welcome message again after DOM content is fully loaded
     });
 };
