@@ -34,11 +34,8 @@ function displayWelcomeMessage() {
 
     if (userName && dateTimeString) {
         var welcomeMessage = "Welcome back, " + userName + "!";
-        welcomeMessage += "<br>Current date and time: " + dateTimeString;
-
-        var welcomeElement = document.createElement('div');
-        welcomeElement.innerHTML = welcomeMessage;
-        document.body.appendChild(welcomeElement);
+        welcomeMessage += "\nCurrent date and time: " + dateTimeString;
+        alert(welcomeMessage);
     }
 }
 
