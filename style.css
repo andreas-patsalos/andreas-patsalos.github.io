@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto; /* Center align container */
+    text-align: center;
+}
+
+/* Top menu */
+
+nav {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: #333;
+    display: flex;
+    justify-content: center; /* Center align items horizontally */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center align items horizontally */
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Header */
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url(images/HeaderBackground.jpg) center/cover;
+    text-align: center;
+    padding: 50px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+header p {
+    color: #ccc;
+    font-size: 1.2em;
+}
+
+/* Main Content */
+
+section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Lists */
+
+ul.lists {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lists > li {
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+}
