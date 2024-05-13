@@ -1,8 +1,13 @@
-// Function to set a cookie with the provided name, value, and expiration date
-function setCookie(cookieName, cookieValue, expirationDays) {
+// Function to set a cookie with the provided name, value, expiration days, domain, and path
+function setCookie(cookieName, cookieValue, expirationDays, domain, path) {
     var expirationDate = new Date();
     expirationDate.setDate(expirationDate.getDate() + expirationDays); // Calculate expiration date
-    var cookieString = cookieName + '=' + encodeURIComponent(cookieValue) + '; expires=' + expirationDate.toUTCString();
+    var cookieString = cookieName + '=' + encodeURIComponent(cookieValue) +
+        '; expires=' + expirationDate.toUTCString() +
+        '; path=' + (path || '/') +
+        (domain ? '; domain=' + domain : '') +
+        '; SameSite=None; Secure'; // Ensure cookie is secure and accessible cross-site
+
     document.cookie = cookieString;
 }
 
@@ -36,12 +41,12 @@ function displayWelcomeMessage() {
     }
 }
 
-// Function to prompt user for name and set the cookie
+// Function to prompt user for name and set the cookie with specific domain and path
 function promptForName() {
     var userInput = prompt("Please enter your name:");
     if (userInput && userInput.trim() !== "") {
-        setCookie('User', userInput.trim(), 1); // Set 'User' cookie with 1-day expiration
-        setCookie('DateTime', new Date().toLocaleString(), 1); // Set 'DateTime' cookie with 1-day expiration
+        setCookie('User', userInput.trim(), 1, 'dev77cmd.github.io', '/'); // Set 'User' cookie with 1-day expiration
+        setCookie('DateTime', new Date().toLocaleString(), 1, 'dev77cmd.github.io', '/'); // Set 'DateTime' cookie with 1-day expiration
         displayWelcomeMessage(); // Display welcome message after setting cookies
     } else {
         alert("Invalid name. Please reload the page and try again.");
@@ -55,7 +60,7 @@ window.onload = function() {
     // Add event listener to handle page refreshes (e.g., F5, browser refresh button)
     window.addEventListener('beforeunload', function(event) {
         // Set a session cookie to detect page refreshes
-        setCookie('SessionRefresh', 'true', 0); // Session cookie (expires when browser is closed)
+        setCookie('SessionRefresh', 'true', 0, 'dev77cmd.github.io', '/'); // Session cookie (expires when browser is closed)
     });
 
     // Add event listener to handle when the DOM content is fully loaded (including images, CSS, etc.)
