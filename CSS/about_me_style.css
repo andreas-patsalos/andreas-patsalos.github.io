@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+    background: url(images/HeaderBackground.jpg) center/cover;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto; /* Center align container */
+    text-align: center;
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: #333;
+    display: flex;
+    justify-content: center; /* Center align items horizontally */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center align items horizontally */
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Clock Styles */
+
+@font-face {
+    font-family: Segment14;
+    src: url('CSS/segment14.woff') format('woff'),
+    url('CSS/segment14.ttf') format('truetype');
+}
+
+div#clock {
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+div#date, div#time {
+    font-size: 1.5em;
+    color:hsl(201,66%,89%);
+    font-family: Segment14;
+    text-align: center;
+    margin: 10px auto;
+}
+
+div#wday {
+    font-size: 1.5em;
+    color:hsl(201,66%,89%);
+    font-family: Segment14;
+    text-align: center;
+    margin: 10px auto;
+    letter-spacing: 0.25em;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Paragraphs */
+
+header > h1 {
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+
+.about {
+    color: gray;
+    background-image: url("images/plain_white_background.jpeg");
+    padding: 50px;
+    border-radius: 25px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+h1 {
+    color: white;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    width: 400px;
+    text-align: center;
+}
+
