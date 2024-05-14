@@ -80,32 +80,9 @@ header {
     color: white;
     text-align: center;
     padding: 1.25em;
-
-}
-
-.skills {
-    color: gray;
-    background-image: url("images/plain_white_background.jpeg");
-    padding: 3.125em;
-    border-radius: 1.5625em;
-    text-align: justify;
-    line-height: 1.5;
 }
 
 header > h1 {
     text-decoration: underline;
     text-decoration-thickness: 5px;
-}
-
-.title {
-    display:inline-block;
-    margin-left: 3.125em;
-    font-weight: bold;
-    padding-bottom: 1em;
-    text-decoration: underline;
-}
-
-.bullets {
-    display:inline-block;
-    margin-left: 5em;
 }
