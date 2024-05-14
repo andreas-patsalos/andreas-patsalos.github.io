@@ -79,47 +79,33 @@ header {
     align-items: center;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 1.25em;
 
 }
 
-.education {
+.hobbies {
     color: gray;
     background-image: url("images/plain_white_background.jpeg");
-    padding: 50px;
+    padding: 3.125em;
     border-radius: 1.5625em;
     text-align: justify;
     line-height: 1.5;
 }
-
-/* List of Education and Qualifications */
 
 header > h1 {
     text-decoration: underline;
     text-decoration-thickness: 5px;
 }
 
-.initial_title {
-    display:inline-block;
-    margin-left: 9.375em;
-    font-weight: bold;
-}
-
 .title {
     display:inline-block;
-    margin-left: 6.75em;
+    margin-left: 3.125em;
     font-weight: bold;
-}
-
-.italic {
-    display:inline-block;
-    margin-left: 12.5em;
-    font-style: italic;
+    padding-bottom: 1em;
+    text-decoration: underline;
 }
 
 .bullets {
     display:inline-block;
-    margin-left: 11.875em;
+    margin-left: 5em;
 }
-
-
