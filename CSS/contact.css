@@ -79,37 +79,28 @@ div#wday {
 }
 
 header {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 1.25em;
 }
 
-/* Paragraphs */
-
-header > h1 {
-    text-decoration: underline;
-    text-decoration-thickness: 5px;
-}
-
-.about {
+.contact {
     color: gray;
     background-image: url("images/plain_white_background.jpeg");
-    padding: 50px;
-    border-radius: 25px;
+    padding: 3.125em;
+    border-radius: 1.5625em;
     text-align: justify;
     line-height: 1.5;
 }
 
-h1 {
-    color: white;
-    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-    width: 400px;
-    text-align: center;
+header > h1 {
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
 }
 
 /* Footer */
@@ -125,4 +116,3 @@ footer {
     display: flex;
     justify-content: center; /* Center align items horizontally */
 }
-
