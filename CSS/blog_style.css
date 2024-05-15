@@ -4,6 +4,8 @@ body {
     font-size: 16px;
     overflow-x: hidden;
     background: url(images/HeaderBackground.jpg) center/cover;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
