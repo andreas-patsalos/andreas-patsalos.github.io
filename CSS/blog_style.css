@@ -87,6 +87,7 @@ header {
     color: white;
     text-align: center;
     padding: 1.25em;
+    border: 3px solid red;
 }
 
 .blog {
