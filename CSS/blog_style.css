@@ -84,9 +84,15 @@ div#wday {
 }
 
 header {
-    padding: 1.25em;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
+    padding: 1.25em;
+    border: 2px solid blue;
 }
 
 .blog {
