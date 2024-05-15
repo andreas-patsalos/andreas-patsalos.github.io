@@ -92,7 +92,6 @@ header {
     color: white;
     text-align: center;
     padding: 1.25em;
-    border: 2px solid blue;
 }
 
 .blog {
@@ -108,15 +107,4 @@ header > h1 {
 #twitter {
     margin: 3em;
     padding: 3em;
-}
-
-/* Footer */
-footer {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    justify-content: center;
-    padding: 0;
-    flex-shrink: 0; /* Prevent footer from shrinking */
-    display: flex;
 }
