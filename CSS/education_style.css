@@ -15,7 +15,7 @@ body {
 nav {
     padding: 0;
     margin: 0;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -120,6 +120,20 @@ header > h1 {
 .bullets {
     display:inline-block;
     margin-left: 11.875em;
+}
+
+/* Footer */
+
+footer {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center; /* Center align items horizontally */
 }
 
 
