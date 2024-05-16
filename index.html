@@ -15,33 +15,46 @@
 
 <body>
 
-<div class="container">
+<section>
+    <img src="CSS/images/bg.jpg" id="bg">
+    <img src="CSS/images/moon.png" id="moon">
+    <img src="CSS/images/mountain.png" id="mountain">
+    <img src="CSS/images/road.png" id="road">
+    <h2 id="text">Andreas Patsalos<br>Computer Science Student</h2>
+</section>
 
-    <nav>
-        <ul>
-            <li><a href="index.html"><img src="CSS/images/menu_home_logo.jpeg" alt="Home"></a></li>
-            <li><a href="about_me.html">About Me</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="hobbies.html">Hobbies/Interests</a></li>
-            <li><a href="blog.html">Blog/Articles</a></li>
-            <li><a href="calculator.html">Calculator</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+<script type="text/javascript">
+    let bg = document.getElementById("bg");
+    let moon = document.getElementById("moon");
+    let mountain = document.getElementById("mountain");
+    let road = document.getElementById("road");
+    let text = document.getElementById("text");
 
-    <header>
-        <h1>Andreas Patsalos</h1>
-        <p>Computer Science Student</p>
-    </header>
+    window.addEventListener('scroll', function () {
+        var value = window.scrollY;
 
-    <footer>
-        <div class="footer-info">
-            <p>Designed and Developed by Andreas Patsalos. 2024</p>
-        </div>
-    </footer>
+        bg.style.top = value * 0.5 + 'px';
+        moon.style.left = -value * 0.5 + 'px';
+        mountain.style.top = -value * 0.15 +'px';
+        road.style.top = value * 0.15 + 'px';
+        text.style.top = value * 1 + 'px';
+    })
+</script>
 
-</div>
+<nav>
+    <ul>
+        <li><a href="index.html"><img src="CSS/images/menu_home_logo.jpeg" alt="Home"></a></li>
+        <li><a href="about_me.html">About Me</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="hobbies.html">Hobbies/Interests</a></li>
+        <li><a href="blog.html">Blog/Articles</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+
 </body>
 </html>
