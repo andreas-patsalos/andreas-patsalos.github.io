@@ -4,8 +4,6 @@ body {
     font-size: 1em;
     overflow-x: hidden;
     background: url(images/HeaderBackground.jpg) center/cover;
-    display: flex;
-    flex-direction: column;
 }
 
 .container {
@@ -113,7 +111,7 @@ header > h1 {
 /* Footer */
 
 footer {
-    position: fixed;
+    position: static;
     bottom: 0;
     left: 0;
     width: 100%;

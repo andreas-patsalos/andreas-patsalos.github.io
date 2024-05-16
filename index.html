@@ -16,45 +16,49 @@
 
 <body>
 
-<section>
-    <img src="CSS/images/bg.jpg" alt="Background Placeholder" id="bg">
-    <img src="CSS/images/moon.png" alt="Moon Image" id="moon">
-    <img src="CSS/images/mountain.png" alt="Mountain Image" id="mountain">
-    <img src="CSS/images/road.png" alt="Road Image" id="road">
-    <h2 id="text">Andreas Patsalos<br>Computer Science Student</h2>
-</section>
+<div class="menu">
+    <nav>
+        <ul>
+            <li><a href="index.html"><img src="CSS/images/menu_home_logo.jpeg" alt="Home"></a></li>
+            <li><a href="about_me.html">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="hobbies.html">Hobbies/Interests</a></li>
+            <li><a href="blog.html">Blog/Articles</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</div>
 
-<script>
-    let bg = document.getElementById("bg");
-    let moon = document.getElementById("moon");
-    let mountain = document.getElementById("mountain");
-    let road = document.getElementById("road");
-    let text = document.getElementById("text");
+<div class="container">
+    <section>
+        <img src="CSS/images/bg.jpg" alt="Background Placeholder" id="bg">
+        <img src="CSS/images/moon.png" alt="Moon Image" id="moon">
+        <img src="CSS/images/mountain.png" alt="Mountain Image" id="mountain">
+        <img src="CSS/images/road.png" alt="Road Image" id="road">
+        <h2 id="text">Andreas Patsalos<br>Computer Science Student</h2>
+    </section>
 
-    window.addEventListener('scroll', function () {
-        var value = window.scrollY;
+    <script>
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
 
-        bg.style.top = value * 0.5 + 'px';
-        moon.style.left = -value * 0.5 + 'px';
-        mountain.style.top = -value * 0.15 +'px';
-        road.style.top = value * 0.15 + 'px';
-        text.style.top = value * 1 + 'px';
-    })
-</script>
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
 
-<nav>
-    <ul>
-        <li><a href="index.html"><img src="CSS/images/menu_home_logo.jpeg" alt="Home"></a></li>
-        <li><a href="about_me.html">About Me</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="hobbies.html">Hobbies/Interests</a></li>
-        <li><a href="blog.html">Blog/Articles</a></li>
-        <li><a href="calculator.html">Calculator</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 +'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value + 'px';
+        })
+    </script>
+</div>
 
 </body>
 </html>
