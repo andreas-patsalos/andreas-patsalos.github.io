@@ -1,4 +1,4 @@
-// Function to set a cookie with the provided name, value, expiration days, domain, and path
+// Set a new cookie
 function setCookie(cookieName, cookieValue, expirationDays, domain, path) {
     var expirationDate = new Date();
     expirationDate.setDate(expirationDate.getDate() + expirationDays); // Calculate expiration date
@@ -11,7 +11,7 @@ function setCookie(cookieName, cookieValue, expirationDays, domain, path) {
     document.cookie = cookieString;
 }
 
-// Function to retrieve cookie value by name
+// Check if cookie exists
 function getCookieValue(cookieName) {
     var name = cookieName + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -26,7 +26,7 @@ function getCookieValue(cookieName) {
     return null;
 }
 
-// Function to display welcome message with user's name and date/time
+// Display welcome message
 function displayWelcomeMessage() {
     var userName = getCookieValue('User');
     const currentTimeDate = new Date();
@@ -39,7 +39,7 @@ function displayWelcomeMessage() {
     }
 }
 
-// Function to prompt user for name and set the cookie with specific domain and path
+// Prompt for user's name and set a new cookie using the setCookie function
 function promptForName() {
     var userName = getCookieValue('User');
 
@@ -52,27 +52,25 @@ function promptForName() {
         if (userInput && userInput.trim() !== "") {
             setCookie('User', userInput.trim(), 1, 'dev77cmd.github.io', '/');
             setCookie('DateTime', new Date().toLocaleString(), 1, 'dev77cmd.github.io', '/');
-            displayWelcomeMessage(); // Display welcome message after setting cookies
+            displayWelcomeMessage();
         } else {
             alert("Invalid name. Please reload the page and try again.");
         }
     }
 }
 
-// Automatically run the script when the page finishes loading
+// Automatic execution of the script after the page fully loads
 window.onload = function() {
-    promptForName(); // Check name
+    promptForName();
 
-    // Add event listener to handle page refreshes (e.g., F5, browser refresh button)
+    // Event listen to handle page refreshes
     window.addEventListener('beforeunload', function(event) {
-        console.log('Before unload event triggered');
         // Set a session cookie to detect page refreshes
         setCookie('SessionRefresh', 'true', 0, 'dev77cmd.github.io', '/'); // Session cookie (expires when browser is closed)
     });
 
-    // Add event listener to handle when the DOM content is fully loaded (including images, CSS, etc.)
+    // Event listen to check if the page is fully loaded
     document.addEventListener('DOMContentLoaded', function(event) {
-        console.log('DOM content loaded');
-        displayWelcomeMessage(); // Display welcome message again after DOM content is fully loaded
+        displayWelcomeMessage();
     });
 };
