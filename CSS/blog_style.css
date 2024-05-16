@@ -10,9 +10,9 @@ body {
 
 .container {
     width: 100%;
-    margin: 0 auto; /* Center align container */
+    margin: 0 auto;
     text-align: center;
-    flex: 1; /* Allow container to grow and fill available space */
+    flex: 1;
 }
 
 nav {
@@ -24,7 +24,7 @@ nav {
     z-index: 1000;
     background-color: #333;
     display: flex;
-    justify-content: center; /* Center align items horizontally */
+    justify-content: center;
 }
 
 nav ul {
@@ -32,7 +32,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Center align items horizontally */
+    justify-content: center;
 }
 
 nav li {
@@ -53,13 +53,14 @@ nav a:hover {
 }
 
 nav ul li a img {
-    width: 20px; /* Adjust the size of the house icon */
+    width: 20px;
     height: auto;
-    vertical-align: middle; /* Align the icon vertically */
+    vertical-align: middle;
     border-radius: 1.5625em;
 }
 
 /* Clock Styles */
+
 #clock {
     margin-top: 1em;
     width: 200px;
