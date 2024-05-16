@@ -7,10 +7,11 @@ body {
 }
 
 .container {
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
 }
 
 nav {
@@ -101,6 +102,15 @@ header > h1 {
 #main {
     flex: 1;
     margin: 2em;
+}
+
+.experience {
+    color: gray;
+    background-image: url("images/plain_white_background.jpeg");
+    padding: 3.125em;
+    border-radius: 1.5625em;
+    text-align: justify;
+    line-height: 1.5;
 }
 
 /* Footer */
