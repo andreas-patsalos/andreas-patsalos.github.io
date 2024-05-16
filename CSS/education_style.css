@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Helvetica', sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     overflow-x: hidden;
     background: url(images/HeaderBackground.jpg) center/cover;
 }
@@ -33,13 +33,13 @@ nav ul {
 }
 
 nav li {
-    margin: 10px;
+    margin: 0.625em;
 }
 
 nav a {
     text-decoration: none;
     color: white;
-    padding: 10px 15px;
+    padding: 0.625em 0.9375em;
     display: block;
     transition: background-color 0.3s;
     box-sizing: border-box;
@@ -50,7 +50,7 @@ nav a:hover {
 }
 
 nav ul li a img {
-    width: 20px;
+    width: 1.25em;
     height: auto;
     vertical-align: middle;
     border-radius: 1.5625em;
@@ -60,22 +60,22 @@ nav ul li a img {
 
 div#clock {
     margin-top: 1em;
-    width: 200px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 12.5em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
 }
 div#date, div#time {
     font-size: 1.5em;
     color:hsl(201,66%,89%);
     text-align: center;
-    margin: 10px auto;
+    margin: 0.625em auto;
 }
 
 div#wday {
     font-size: 1.5em;
     color:hsl(201,66%,89%);
     text-align: center;
-    margin: 10px auto;
+    margin: 0.625em auto;
     letter-spacing: 0.25em;
 }
 
@@ -87,14 +87,14 @@ header {
     align-items: center;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 1.25em;
 
 }
 
 .education {
     color: gray;
     background-image: url("images/plain_white_background.jpeg");
-    padding: 50px;
+    padding: 3.125em;
     border-radius: 1.5625em;
     text-align: justify;
     line-height: 1.5;
@@ -141,7 +141,7 @@ footer {
     background-color: #333;
     color: white;
     display: flex;
-    justify-content: center; /* Center align items horizontally */
+    justify-content: center;
 }
 
 
