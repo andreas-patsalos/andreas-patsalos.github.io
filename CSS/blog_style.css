@@ -61,6 +61,7 @@ nav ul li a img {
 
 /* Clock Styles */
 #clock {
+    margin-top: 1em;
     width: 200px;
     padding-left: 20px;
     padding-right: 20px;
