@@ -4,4 +4,4 @@ The website offers a cookie feature, to remember the user the next time they con
 
 Created in the Webstorm environment, using HTML, CSS and Javascript.
 
-The website is hosted on https://dev77cmd.github.io
+The website is hosted on https://andreas-patsalos.github.io
